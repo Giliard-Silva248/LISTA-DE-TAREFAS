@@ -1,39 +1,81 @@
+:root{
+    --cor1: #99D5C9;
+    --cor2: #6C969D;
+    --cor3: #645E9D;
+    --cor4: #392B58;
+    --cor5: #2D0320;
+}
+
 *{
     margin: 0;
     padding: 0;
-    border: 1px solid;
 }
 
+body{
+    background-color: var(--cor5);
+    color: var(--cor1);
+    height: 99.5vh;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+}
 .container{
-    background-color: aqua;
+    max-width: 1500px;
     width: 100%;
-    height: 100vh;
-
+    margin: auto;
 }
 
 .conteudo{
-    background-color: yellow;
-    height: 500px;
-    max-width: 800px;
+    max-width: 500px;
     width: 100%;
     margin: auto;
-
+    margin-top: 25px;
+    margin-bottom: 25px;
     
 }
-h1, h3{
-   text-align: center;
-} 
-ul{
-    display: flex;
-    width: 600px;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-li{
-    margin: 2px;
-}
-.res {
 
-    width: 600px;
-    margin: auto;
+
+.conteudo h1,h3{
+    text-align: center;
+    margin: 20px;
+}
+
+input{
+
+    margin: 5px;
+}
+
+ul{
+    margin: 5px;
+    padding: 10px;
+    text-align: right;
+    border: 1px solid;
+}  
+li{
+    background-color: var(--cor3);
+    margin: 5px;
+    padding: 5px;
+    border-radius: 15px;
+}
+li:hover{
+    background-color: var(--cor4);
+}
+
+.txt{
+    background-color: var(--cor1);
+    border: none;
+    border-bottom: 3px solid var(--cor3);
+    border-radius: 3px;
+    height: 23px;
+}
+
+.btn{
+    border: none;
+    background-color: transparent;
+    color: var(--cor1);
+    border-bottom: 3px solid;
+    cursor: pointer;
+    
+}
+.btn:hover{
+    color: var(--cor2);
 }
