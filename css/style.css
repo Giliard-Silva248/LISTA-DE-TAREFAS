@@ -79,3 +79,18 @@ li:hover{
 .btn:hover{
     color: var(--cor2);
 }
+
+.btn2{
+    border: none;
+    background-color: transparent;
+    color: var(--cor1);
+    border-bottom: 3px solid;
+    cursor: pointer;
+}
+.btn2:hover{
+    color: var(--cor2);
+}
+
+.hora{
+    color: red;
+}

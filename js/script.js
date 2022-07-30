@@ -1,12 +1,12 @@
-const txt = document.querySelector('.txt')
-const but = document.querySelector('.but')
-const tarefas = document.querySelector('.tarefas')
+let txt = document.querySelector('.txt')
+let but = document.querySelector('.but')
+let tarefas = document.querySelector('.tarefas')
 
 /*cria o elemento 'li' no 'ul'*/
 function criaLi(){
-    const li = document.createElement('li')
-    return li  
-}
+    let li = document.createElement('li')   
+    return  li
+}   
 
 /*deixa o campo vazio dps que uma tarefa é add*/
 function limpaInput(){
@@ -15,16 +15,27 @@ function limpaInput(){
 }
 
 function criaTarefas(textoInput){
+   
+    let button = document.createElement('button');
+    button.addEventListener('click', () =>{
+        li.remove()
+        button.remove()
+    })
+
+    button.setAttribute('type','button')
+    button.appendChild(document.createTextNode('APAGAR'));
+    button.className = 'btn2'
+    let li = criaLi()
+    li.innerHTML += textoInput
+    tarefas.appendChild(li)
+    tarefas.appendChild(button)
     
-    const li = criaLi()
-    li.innerText = textoInput
-    tarefas.appendChild(li) 
     let data = new Date()
     let hora = data.toLocaleTimeString()
+    li.innerHTML += ` (${hora})`
     /*add os itens na lista*/
     limpaInput()//chamando essa função e limpa a área de texto dps de add o item
-
-    li.innerHTML += ` (${hora})`
+    
 }
 
 /*add no doc o valor inserido no input*/
@@ -33,9 +44,6 @@ function add(){
     criaTarefas(txt.value) 
 }
 
-function butExcluir(){
-    const lii = document.querySelector('li')
-    lii.remove('li')
-}
+
 
 
